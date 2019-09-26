@@ -21,7 +21,7 @@ module.exports = {
             if (err) {console.log(err); throw err;}
             var param = req.query || req.params;
 
-            connection.query($sql.insert,[param.ride_id,param.pick, param.drop,param.people_num,param.wechat_id,param.note],function(err,result){
+            connection.query($sql.insert,[param.ride_id, param.user_id, "PENDING", param.num_passenger, param.note],function(err,result){
                 // connection.query($sql.insert,[1,"ucsb", "lax",4,"kevin","handsome"],function(err,result){
                 if (err) {console.log(err); throw err;}
                 // console.log(param.pick);
