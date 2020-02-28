@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var router = express.Router();
 
-/* GET users listing. */
+/* POST users listing. */
 
 var secret = {
     host: process.env.HOST,
